@@ -23,6 +23,41 @@
 
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+    .box {
+        margin-bottom: 20px; /* Add margin bottom to create space between boxes */
+    }
+
+    .box h3 {
+        position: relative;
+        cursor: pointer;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .box h3 i {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 5px;
+    }
+
+    .box h3:hover {
+        opacity: 0.8;
+    }
+
+    .box-content {
+        display: none;
+    }
+
+    .expanded .box-content {
+        display: block;
+    }
+
+    .box.expanded h3 i {
+        transform: translateY(-50%) rotate(180deg);
+    }
+  </style>
 </head>
 
 <body>
@@ -95,22 +130,32 @@
           </div>
 
           <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project informatie</h3>
-              <ul>
-                <li><strong>Categorie</strong>: Application Development</li>
-                <li><strong>Klant</strong>: Van Der Velde Sprinter & Colli Service</li>
-                <li><strong>Project datum</strong>: Mei, 2023</li>
-                <!--  <li><strong>Project Document</strong>: <a href="assets/docs/Technical Manual Van Der Velde Adminware.pdf">Download</a></li>  -->
-              </ul>
+            <div class="box expanded" id="project-info"> <!-- Added expanded class here -->
+                <h3>Project Informatie <i class="bi bi-chevron-down"></i></h3>
+                <div class="box-content">
+                    <ul>
+                        <li><strong>Categorie</strong>: Application Development</li>
+                        <li><strong>Klant</strong>: Van Der Velde Sprinter & Colli Service</li>
+                        <li><strong>Project datum</strong>: Mei, 2023</li>
+                        <!--  <li><strong>Project Document</strong>: <a href="assets/docs/Technical Manual Van Der Velde Adminware.pdf">Download</a></li>  -->
+                    </ul>
+                </div>
             </div>
-            <div class="portfolio-description">
-              <h2>Omschrijving</h2>
-              <p>
-                Voor de modernisering van een verouderde backoffice applicatie bij het logistiek bedrijf Van Der Velde heb ik een nieuwe applicatie gemaakt op het Microsoft Power Platform&trade;. Het Power Platform maakt het mogelijk om low code applicaties te schrijven waardoor de development tijd en kosten zwaar verlaagd worden. Voor deze applicatie zijn de oude entiteiten van de database gemigreerd naar Microsoft Dataverse&trade;. De applicatie maakte het mogelijk personeel, de gewerkte uren, het wagenpark en alles hieromtrent bij te houden.
-              </p>
+            <div class="box" id="omschrijving">
+                <h3>Omschrijving <i class="bi bi-chevron-down"></i></h3>
+                <div class="box-content">
+                    <p>
+                      Voor de modernisering van een verouderde backoffice applicatie bij het logistiek bedrijf Van Der Velde heb ik tijdens mijn traineeship bij Wevecs een nieuwe applicatie gemaakt op het Microsoft Power Platform&trade;. 
+                      <br><br>
+                      Het Power Platform maakt het mogelijk om low code applicaties te schrijven waardoor de development tijd en kosten zwaar verlaagd worden. 
+                      <br><br>
+                      Voor deze applicatie zijn de oude entiteiten van de database gemigreerd naar Microsoft Dataverse&trade;. 
+                      <br><br>
+                      De applicatie maakte het mogelijk personeel, de gewerkte uren, het wagenpark en alles hieromtrent bij te houden.
+                    </p>
+                </div>
             </div>
-          </div>
+        </div>
 
         </div>
 
@@ -132,6 +177,16 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.box h3').forEach(function (heading) {
+            heading.addEventListener('click', function () {
+                this.parentElement.classList.toggle('expanded');
+            });
+        });
+    });
+  </script>
 
 </body>
 
