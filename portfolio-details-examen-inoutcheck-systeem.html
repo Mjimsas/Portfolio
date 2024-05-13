@@ -2,188 +2,219 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Details - In/Uitcheck systeem examens</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <title>Details - In/Uitcheck systeem examens</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/favicon-icon.png" rel="favicon-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    
+    <style>
+        /* Add your custom styles here */
 
-  <link href="assets/css/style.css" rel="stylesheet">
+        .box {
+            margin-bottom: 20px; /* Add margin bottom to create space between boxes */
+        }
 
+        .box h3 {
+            position: relative;
+            cursor: pointer;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .box h3 i {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 5px;
+        }
+
+        .box h3:hover {
+            opacity: 0.8;
+        }
+
+        .box-content {
+            display: none;
+            margin-top: 15px; /* Add white space */
+        }
+
+        .expanded .box-content {
+            display: block;
+        }
+
+        .box.expanded h3 i {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    </style>
 </head>
 
 <body>
 
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
 
-  <header id="header">
-    <div class="d-flex flex-column">
+    <header id="header">
+        <div class="d-flex flex-column">
 
-      <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Anthony Van Roy</a></h1>
-        <div class="social-links mt-3 text-center">
-          <a href="https://www.linkedin.com/in/anthony-van-roy-a99211253/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            <div class="profile">
+                <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+                <h1 class="text-light"><a href="index.html">Anthony Van Roy</a></h1>
+                <div class="social-links mt-3 text-center">
+                    <a href="https://www.linkedin.com/in/anthony-van-roy-a99211253/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+            </div>
+
+            <nav id="navbar" class="nav-menu navbar">
+                <ul>
+                    <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                    <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Over Mij</span></a></li>
+                    <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Curriculum Vitae</span></a></li>
+                    <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+                    <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+                </ul>
+            </nav>
         </div>
-      </div>
+    </header>
 
-      <nav id="navbar" class="nav-menu navbar">
-        <ul>
-          <li><a href="index.html#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="index.html#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Over Mij</span></a></li>
-          <li><a href="index.html#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Curriculum Vitae</span></a></li>
-          <li><a href="index.html#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="index.html#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <main id="main">
 
-  <main id="main">
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
 
-    <section id="breadcrumbs" class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Details - In/Uitcheck systeem examens</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Details - In/Uitcheck systeem examens</li>
-          </ol>
-        </div>
-
-      </div>
-    </section>
-
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="">
-                  <img src="assets/img/portfolio/portfolio-examen-inoutcheck-systeem.jpg" alt="">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Details - In/Uitcheck systeem examens</h2>
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li>Details - In/Uitcheck systeem examens</li>
+                    </ol>
                 </div>
 
-              </div>
-              <div class="swiper-pagination"></div>
             </div>
-          </div>
+        </section>
 
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project informatie</h3>
-              <ul>
-                <li><strong>Categorie</strong>: IOT/AI</li>
-                <li><strong>Project datum</strong>:Jan, 2024</li>
-              </ul>
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container">
+
+                <div class="row gy-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-details-slider swiper">
+                            <div class="swiper-wrapper align-items-center">
+
+                                <div class="swiper-slide">
+                                    <img src="assets/img/portfolio/portfolio-examen-inoutcheck-systeem.jpg" alt="">
+                                </div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="box expanded" id="project-info"> <!-- Added expanded class here -->
+                            <h3>Project informatie <i class="bi bi-chevron-down"></i></h3>
+                            <div class="box-content">
+                                <ul>
+                                    <li><strong>Categorie</strong>: IOT/AI</li>
+                                    <li><strong>Project datum</strong>: Jan, 2024</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="box" id="portfolio-description">
+                            <h3>Omschrijving <i class="bi bi-chevron-down"></i></h3>
+                            <div class="box-content">
+                                <p>
+                                    Tijdens mijn studiecarrière aan Thomas More campus Geel (2023-2024) heb ik verschillende projecten gemaakt. 
+                                    <br><br>
+                                    Eén daarvan was proof of concept maken voor het moderniseren van het examen in/uitcheck systeem.
+                                    <br><br>
+                                    Dit project had tot doel om de uitdagingen aan te pakken die gepaard gaan met het traditionele papieren inchecksysteem voor examens, 
+                                    dat vaak tijdrovend was en extra mankracht vereiste.
+                                    <br><br>
+                                    De oplossing omvat geavanceerde technologieën, waaronder een LCD-scherm voor gebruikersfeedback, een RFID-kaartlezer voor snelle en efficiënte identificatie van studenten, 
+                                    en een webcam (niet te zien op de foto) die een cruciale rol speelt bij het waarborgen van de integriteit van het incheckproces.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="box" id="portfolio-description">
+                            <h3>Belangrijkste Kenmerken <i class="bi bi-chevron-down"></i></h3>
+                            <div class="box-content">
+                                <p>
+                                    RFID-Kaartlezer:
+                                </p>
+                                <p>
+                                    Het hart van het systeem is de RFID-kaartlezer, waarmee studenten moeiteloos kunnen in- en uitchecken met hun studentenpas.
+                                    Dit vereenvoudigt niet alleen het proces, maar zorgt ook voor een nauwkeurige identificatie en vermindert de kans op fouten.
+                                </p>
+                                <p>
+                                    LCD-scherm voor Feedback:
+                                </p>
+                                <p>
+                                    Het LCD-scherm geeft real-time feedback aan studenten, waarbij hun incheckstatus en andere relevante informatie worden bevestigd.
+                                    De gebruiksvriendelijke interface verbetert de algehele ervaring en minimaliseert mogelijke verwarring.
+                                </p>
+                                <p>
+                                    Minimale Tijdsduur:
+                                </p>
+                                <p>
+                                    Om frauduleuze pogingen te voorkomen, is een minimale tijdsduur van 30 minuten geïmplementeerd. 
+                                    Studenten kunnen niet uitchecken voordat deze minimale tijd is verstreken sinds het begin van het examen.
+                                    Deze functie voegt een extra beveiligingslaag toe en waarborgt de integriteit van het examenproces.
+                                </p>
+                                <p>
+                                    Gezichtsherkenning via DeepStack:
+                                </p>
+                                <p>
+                                    Niet zichtbaar op de foto, integreert het systeem een webcam die studenten vraagt een foto te maken tijdens het incheckproces.
+                                    De gezichtsherkenningstechnologie van DeepStack verifieert vervolgens de identiteit van de student, 
+                                    waardoor ongeautoriseerde inchecks met andermans ID worden voorkomen.
+                                </p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+
+                </div>
+
             </div>
-            <div class="portfolio-description">
-              <h2>Omschrijving</h2>
-              <p>
-                Tijdens mijn studiecarrière aan Thomas More campus Geel (2023-2024) heb ik verschillende projecten gemaakt. 
-                Eén daarvan was proof of concept maken voor het moderniseren van het examen in/uitcheck systeem. 
-                Dit project had tot doel om de uitdagingen aan te pakken die gepaard gaan met het traditionele papieren inchecksysteem voor examens, 
-                dat vaak tijdrovend was en extra mankracht vereiste. De oplossing omvat geavanceerde technologieën, 
-                waaronder een LCD-scherm voor gebruikersfeedback, een RFID-kaartlezer voor snelle en efficiënte identificatie van studenten, 
-                en een webcam (niet te zien op de foto) die een cruciale rol speelt bij het waarborgen van de integriteit van het incheckproces.
-              </p>
-              <p>
-                Belangrijkste Kenmerken:
-              </p>
-              <p>
-                RFID-Kaartlezer:
-              </p>
-              <p>
-                Het hart van het systeem is de RFID-kaartlezer, waarmee studenten moeiteloos kunnen in- en uitchecken met hun studentenpas.
-                Dit vereenvoudigt niet alleen het proces, maar zorgt ook voor een nauwkeurige identificatie en vermindert de kans op fouten.
-              </p>
-              <p>
-                LCD-scherm voor Feedback:
-              </p>
-              <p>
-                Het LCD-scherm geeft real-time feedback aan studenten, waarbij hun incheckstatus en andere relevante informatie worden bevestigd.
-                De gebruiksvriendelijke interface verbetert de algehele ervaring en minimaliseert mogelijke verwarring.
-              </p>
-              <p>
-                Minimale Tijdsduur:
-              </p>
-              <p>
-                Om frauduleuze pogingen te voorkomen, is een minimale tijdsduur van 30 minuten geïmplementeerd. 
-                Studenten kunnen niet uitchecken voordat deze minimale tijd is verstreken sinds het begin van het examen.
-                Deze functie voegt een extra beveiligingslaag toe en waarborgt de integriteit van het examenproces.
-              </p>
-              <p>
-                Gezichtsherkenning via DeepStack:
-              </p>
-              <p>
-                Niet zichtbaar op de foto, integreert het systeem een webcam die studenten vraagt een foto te maken tijdens het incheckproces.
-                De gezichtsherkenningstechnologie van DeepStack verifieert vervolgens de identiteit van de student, 
-                waardoor ongeautoriseerde inchecks met andermans ID worden voorkomen.
-              </p>
-              <p>
-                Niet zichtbaar op de foto, integreert het systeem een webcam die studenten vraagt een foto te maken tijdens het incheckproces.
-                De gezichtsherkenningstechnologie van DeepStack verifieert vervolgens de identiteit van de student, waardoor ongeautoriseerde inchecks met andermans ID worden voorkomen.
-              </p>
-              <p>
-                Voordelen:
-              </p>
-              <p>
-                Verbeterde Beveiliging: De combinatie van RFID-kaartlezing en gezichtsherkenning vermindert aanzienlijk het risico op identiteitsfraude.
-                Efficiëntie: Snelle en naadloze in- en uitcheckprocessen besparen waardevolle tijd voor zowel studenten als examenbeheerders.
-                Intuïtieve Interface: Het LCD-scherm biedt duidelijke en directe feedback, wat zorgt voor een soepele gebruikerservaring.
-              </p>
-              <br>
+        </section>
 
-            <div class="">
-              <p>Team</p>
-              <ul>
-                <li>Anthony Van Roy</li>
-                <li>Michiel Kuyken</li>
-                <li>Bryan Poleunis</li>
-                <li>Thomas Deboel</li>
-              </ul>
-            </div>
+    </main>
 
-            </div>
-          </div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-        </div>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/typed.js/typed.umd.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
 
-      </div>
-    </section>
+    <script src="assets/js/main.js"></script>
 
-  </main>
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.box h3').forEach(function (heading) {
+                heading.addEventListener('click', function () {
+                    this.parentElement.classList.toggle('expanded');
+                });
+            });
+        });
+    </script>
 
 </body>
 
