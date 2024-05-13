@@ -23,6 +23,42 @@
 
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+    .box {
+        margin-bottom: 20px; /* Add margin bottom to create space between boxes */
+    }
+
+    .box h3 {
+        position: relative;
+        cursor: pointer;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .box h3 i {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 5px;
+    }
+
+    .box h3:hover {
+        opacity: 0.8;
+    }
+
+    .box-content {
+        display: none;
+    }
+
+    .expanded .box-content {
+        display: block;
+    }
+
+    .box.expanded h3 i {
+        transform: translateY(-50%) rotate(180deg);
+    }
+  </style>
+
 </head>
 
 <body>
@@ -87,21 +123,35 @@
           </div>
 
           <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Categorie</strong>: Netwerken en Cybersecurity</li>
-                <li><strong>Klant</strong>: Wevecs</li>
-                <li><strong>Project datum</strong>: Mei, 2023</li>
-              </ul>
+            <div class="box expanded" id="project-info">
+                <h3>Project Informatie <i class="bi bi-chevron-down"></i></h3>
+                <div class="box-content">
+                    <ul>
+                        <li><strong>Categorie</strong>: Netwerken en Cybersecurity</li>
+                        <li><strong>Klant</strong>: Wevecs</li>
+                        <li><strong>Project datum</strong>: Mei, 2023</li>
+                    </ul>
+                </div>
             </div>
-            <div class="portfolio-description">
-              <h2>Omschrijving</h2>
-              <p>
-                De vraag naar een profesioneel en veilig netwerk is heel groot. In dit project heb ik een bedrijfsnetwerk gemaakt met Fortinet&trade; materiaal. Hiervoor werd het volgende materiaal gebruikt. Fortigate&trade; voor de firewall appliance, Fortiswitch&trade; als netwerk switchen en FortiAP&trade; als wireless access points. Hierop is een SSL VPN opgesteld en Advanced firewalling met SSL decryptie voor inline virus detectie en IPS functies ingesteld. Ook werd achteraf de volledig installatie getest op security rating en performantie aan de hand van EICAR virus bestanden en speedtests.
-              </p>
+            <div class="box" id="omschrijving">
+                <h3>Omschrijving <i class="bi bi-chevron-down"></i></h3>
+                <div class="box-content">
+                    <p>
+                      De vraag naar een profesioneel en veilig netwerk is heel groot. 
+                      <br><br>
+                      In dit project heb ik een bedrijfsnetwerk gemaakt met Fortinet&trade; materiaal. 
+                      <br><br>
+                      Hiervoor werd het volgende materiaal gebruikt. 
+                      <br><br>
+                      Fortigate&trade; voor de firewall appliance, Fortiswitch&trade; als netwerk switchen en FortiAP&trade; als wireless access points. 
+                      <br><br>
+                      Hierop is een SSL VPN opgesteld en Advanced firewalling met SSL decryptie voor inline virus detectie en IPS functies ingesteld. 
+                      <br><br>
+                      Ook werd achteraf de volledig installatie getest op security rating en performantie aan de hand van EICAR virus bestanden en speedtests.
+                    </p>
+                </div>
             </div>
-          </div>
+        </div>
 
         </div>
 
@@ -123,6 +173,16 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <script src="assets/js/main.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('.box h3').forEach(function (heading) {
+            heading.addEventListener('click', function () {
+                this.parentElement.classList.toggle('expanded');
+            });
+        });
+    });
+  </script>
 
 </body>
 
