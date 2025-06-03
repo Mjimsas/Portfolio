@@ -35,11 +35,19 @@
   }
 
   /**
-   * Navbar links active state on scroll
+   * Navbar links active state on scroll (fixed version)
    */
-  let navbarlinks = select('#navbar .scrollto', true)
+  let navbarlinks = select('#navbar .scrollto', true);
   const navbarlinksActive = () => {
-    let position = window.scrollY + window.innerHeight / 2;
+    let position = window.scrollY + 120; // Use small offset instead of middle of viewport
+  
+    // Special case: when user is at bottom of page, highlight last link (contact)
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 2) {
+      navbarlinks.forEach(navbarlink => navbarlink.classList.remove('active'));
+      navbarlinks[navbarlinks.length - 1].classList.add('active');
+      return;
+    }
+  
     navbarlinks.forEach(navbarlink => {
       if (!navbarlink.hash) return;
       let section = select(navbarlink.hash);
@@ -53,8 +61,9 @@
       }
     });
   }
-  window.addEventListener('load', navbarlinksActive)
-  onscroll(document, navbarlinksActive)
+  window.addEventListener('load', navbarlinksActive);
+  onscroll(document, navbarlinksActive);
+  
 
   /**
    * Scrolls to an element with header offset
