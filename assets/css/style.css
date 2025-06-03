@@ -1092,3 +1092,24 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+.btn-download {
+  display: inline-block;
+  background-color: #149ddd;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-download i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.btn-download:hover {
+  background-color: #37b3ed;
+  color: #fff;
+}
