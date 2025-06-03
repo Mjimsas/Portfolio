@@ -39,17 +39,19 @@
    */
   let navbarlinks = select('#navbar .scrollto', true)
   const navbarlinksActive = () => {
-    let position = window.scrollY + 200
+    let position = window.scrollY + window.innerHeight / 2;
     navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        navbarlink.classList.add('active')
+      if (!navbarlink.hash) return;
+      let section = select(navbarlink.hash);
+      if (!section) return;
+      let sectionTop = section.offsetTop;
+      let sectionHeight = section.offsetHeight;
+      if (position >= sectionTop && position < sectionTop + sectionHeight) {
+        navbarlink.classList.add('active');
       } else {
-        navbarlink.classList.remove('active')
+        navbarlink.classList.remove('active');
       }
-    })
+    });
   }
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
